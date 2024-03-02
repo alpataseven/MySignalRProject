@@ -1,6 +1,12 @@
-﻿namespace EntityLayer.Entities
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DtoLayer.AboutDto
 {
-    public class About
+    public class ResultAboutDto
     {
         public int AboutId { get; set; }
         public string AboutImageUrl { get; set; }
