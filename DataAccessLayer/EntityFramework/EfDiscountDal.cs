@@ -10,7 +10,7 @@ using EntityLayer.Entities;
 
 namespace DataAccessLayer.EntityFramework
 {
-    internal class EfDiscountDal : GenericRepository<Discount>, IDiscountDal
+    public class EfDiscountDal : GenericRepository<Discount>, IDiscountDal
     {
         public EfDiscountDal(Context context) : base(context)
         {

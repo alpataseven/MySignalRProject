@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Entities;
 
 namespace BusinessLayer.Concrete
 {
-    public class ContactManager : IContactDal
+    public class ContactManager : IContactService
     {
         private readonly IContactDal _contactDal;
 
@@ -35,6 +36,31 @@ namespace BusinessLayer.Concrete
         public List<Contact> GetListAll()
         {
             return _contactDal.GetListAll();
+        }
+
+        public void TAdd(Contact entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(Contact entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Contact TGetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Contact> TGetListAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Contact entity)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Contact entity)
