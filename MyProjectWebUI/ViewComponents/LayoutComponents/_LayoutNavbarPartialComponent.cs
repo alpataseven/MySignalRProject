@@ -2,7 +2,7 @@
 
 namespace MyProjectWebUI.ViewComponents.LayoutComponents
 {
-	public class _LayoutSidebarPartialComponent:ViewComponent
+	public class _LayoutNavbarPartialComponent : ViewComponent
 	{
 		public IViewComponentResult Invoke()
 		{
