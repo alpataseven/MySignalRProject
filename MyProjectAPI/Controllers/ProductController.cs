@@ -55,7 +55,8 @@ namespace MyProjectAPI.Controllers
                 ProductImageUrl = createProductDto.ProductImageUrl,
                 ProductName = createProductDto.ProductName,
                 ProductPrice = createProductDto.ProductPrice,
-                ProductStatus = createProductDto.ProductStatus
+                ProductStatus = createProductDto.ProductStatus,
+                CategoryId = createProductDto.CategoryId
             });
             return Ok("ürün bilgisi eklendi");
         }
@@ -66,7 +67,7 @@ namespace MyProjectAPI.Controllers
             _productService.TDelete(value);
             return Ok("ürün bilgisi silindi");
         }
-        [HttpGet("GetProduct")]
+        [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
             var value = _productService.TGetById(id);
@@ -82,7 +83,8 @@ namespace MyProjectAPI.Controllers
                 ProductImageUrl = updateProductDto.ProductImageUrl,
                 ProductName = updateProductDto.ProductName,
                 ProductPrice = updateProductDto.ProductPrice,
-                ProductStatus = updateProductDto.ProductStatus
+                ProductStatus = updateProductDto.ProductStatus,
+                CategoryId = updateProductDto.CategoryId
             });
             return Ok("ürün bilgisi güncellendi");
         }
